@@ -19,7 +19,7 @@ async def query_handler(bot: Client, query: CallbackQuery):
             InlineKeyboardButton("Close", callback_data="close")
         ]]
         await query.message.edit_text(
-            text=scripts.ABOUT_TXT.format(temp_utils.BOT_NAME),
+            text=scripts.ABOUT_TXT.format(temp.B_NAME),
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(btn)
         )
@@ -32,7 +32,7 @@ async def query_handler(bot: Client, query: CallbackQuery):
             InlineKeyboardButton("Help", callback_data="help")
         ]]
         await query.message.edit_text(
-            text=scripts.START_TXT.format(query.from_user.mention, temp_utils.USER_NAME, temp_utils.BOT_NAME),
+            text=scripts.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(btn)
         )
@@ -55,7 +55,7 @@ async def query_handler(bot: Client, query: CallbackQuery):
             InlineKeyboardButton("Close", callback_data="close")
         ]]
         await query.message.edit_text(
-            text=scripts.HELP_TXT.format(temp_utils.BOT_NAME),
+            text=scripts.HELP_TXT.format(temp.B_NAME),
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(btn)
         )
