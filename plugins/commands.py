@@ -23,7 +23,7 @@ async def start_message(bot, message):
             InlineKeyboardButton("Help", callback_data="help")
         ]]
     await message.reply_text(
-        text=scripts.START_TXT.format(message.from_user.mention, temp_utils.USER_NAME, temp_utils.BOT_NAME),
+        text=scripts.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(btn)
     )
